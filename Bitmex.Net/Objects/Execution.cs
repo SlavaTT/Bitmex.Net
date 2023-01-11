@@ -131,6 +131,12 @@ namespace    Bitmex.Net.Client.Objects
         [JsonProperty("timestamp")]
         public System.DateTime? Timestamp { get; set; }
 
+        [JsonProperty("realisedPnl")]
+        public decimal? RealisedPnl { get; set; }
+
+        [JsonProperty("unrealisedPnl")]
+        public decimal? UnrealisedPnl { get; set; }
+
 
         internal UserTrade ToCryptoExchangeUserTrade()
         {
