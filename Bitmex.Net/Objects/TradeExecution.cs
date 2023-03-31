@@ -7,7 +7,7 @@ namespace    Bitmex.Net.Client.Objects
 
     /// <summary>Raw Order and Balance Data</summary>
 
-    public class Execution
+    public class TradeExecution
     {
         [JsonProperty("execID", Required = Required.Always)]
         public string ExecID { get; set; }

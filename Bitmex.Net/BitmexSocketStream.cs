@@ -75,7 +75,7 @@ namespace Bitmex.Net.Client
         public event Action<BitmexSocketEvent<TradeBin>> OnOneHourTradeBinUpdate;
         public event Action<BitmexSocketEvent<TradeBin>> OnDailyTradeBinUpdate;
         public event Action<BitmexSocketEvent<Affiliate>> OnUserAffiliatesUpdate;
-        public event Action<BitmexSocketEvent<Execution>> OnUserExecutionsUpdate;
+        public event Action<BitmexSocketEvent<TradeExecution>> OnUserExecutionsUpdate;
         public event Action<BitmexSocketEvent<BitmexOrder>> OnUserOrdersUpdate;
         public event Action<BitmexSocketEvent<Margin>> OnUserMarginUpdate;
         public event Action<BitmexSocketEvent<BitmexPosition>> OnUserPositionsUpdate;
@@ -398,7 +398,7 @@ namespace Bitmex.Net.Client
                         }
                     case BitmexSubscribtions.Execution:
                         {
-                            var result = Deserialize<BitmexSocketEvent<Execution>>(token);
+                            var result = Deserialize<BitmexSocketEvent<TradeExecution>>(token);
                             if (result.Success)
                                 OnUserExecutionsUpdate?.Invoke(result.Data);
                             else

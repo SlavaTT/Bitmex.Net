@@ -83,10 +83,10 @@ namespace Bitmex.Net
         }
 
         ///<inheritdoc/>
-        public async Task<WebCallResult<List<Execution>>> GetExecutionsTradeHistoryAsync(BitmexRequestWithFilter requestWithFilter = null, CancellationToken ct = default)
+        public async Task<WebCallResult<List<TradeExecution>>> GetExecutionsTradeHistoryAsync(BitmexRequestWithFilter requestWithFilter = null, CancellationToken ct = default)
         {
             var parameters = GetParameters(requestWithFilter);
-            return await SendRequestAsync<List<Execution>>(GetTradeHistoryEndpoint, HttpMethod.Get, ct, parameters);
+            return await SendRequestAsync<List<TradeExecution>>(GetTradeHistoryEndpoint, HttpMethod.Get, ct, parameters);
         }
 
         #endregion
@@ -390,10 +390,10 @@ namespace Bitmex.Net
             return await SendRequestAsync<List<WalletHistory>>(UserWalletHistoryEndpoint, HttpMethod.Get, ct, parameters);
         }
         ///<inheritdoc/>
-        public async Task<WebCallResult<List<Execution>>> GetUserExecutionHistoryAsync(BitmexRequestWithFilter requestWithFilter = null, CancellationToken ct = default)
+        public async Task<WebCallResult<List<UserExecution>>> GetUserExecutionHistoryAsync(BitmexRequestWithFilter requestWithFilter = null, CancellationToken ct = default)
         {
             var parameters = GetParameters(requestWithFilter);
-            return await SendRequestAsync<List<Execution>>(UserExecutionHistoryEndpoint, HttpMethod.Get, ct, parameters);
+            return await SendRequestAsync<List<UserExecution>>(UserExecutionHistoryEndpoint, HttpMethod.Get, ct, parameters);
         }
 
         ///<inheritdoc/>

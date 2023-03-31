@@ -154,7 +154,7 @@ namespace Bitmex.Net.Client
             add => MainSocketStreams.OnUserAffiliatesUpdate += value;
             remove => MainSocketStreams.OnUserAffiliatesUpdate -= value;
         }
-        public event Action<BitmexSocketEvent<Execution>> OnUserExecutionsUpdate
+        public event Action<BitmexSocketEvent<TradeExecution>> OnUserExecutionsUpdate
         {
             add => MainSocketStreams.OnUserExecutionsUpdate += value;
             remove => MainSocketStreams.OnUserExecutionsUpdate -= value;
