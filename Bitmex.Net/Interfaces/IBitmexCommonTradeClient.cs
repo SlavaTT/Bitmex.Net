@@ -30,7 +30,7 @@ namespace Bitmex.Net.Client.Interfaces
         /// </summary>
         /// <param name="requestWithFilter"></param>
         /// <returns></returns>
-        Task<WebCallResult<List<Execution>>> GetExecutionsTradeHistoryAsync(BitmexRequestWithFilter requestWithFilter = null, CancellationToken ct = default);
+        Task<WebCallResult<List<TradeExecution>>> GetExecutionsTradeHistoryAsync(BitmexRequestWithFilter requestWithFilter = null, CancellationToken ct = default);
         #endregion
         #region Instrument : Tradeable Contracts, Indices, and History 
         /// <summary>
@@ -271,7 +271,7 @@ namespace Bitmex.Net.Client.Interfaces
         /// <param name="requestWithFilter">you can set Symbol and Timestamp here</param>
         /// <param name="ct"></param>
         /// <returns></returns>
-        Task<WebCallResult<List<Execution>>> GetUserExecutionHistoryAsync(BitmexRequestWithFilter requestWithFilter = null, CancellationToken ct = default);
+        Task<WebCallResult<List<UserExecution>>> GetUserExecutionHistoryAsync(BitmexRequestWithFilter requestWithFilter = null, CancellationToken ct = default);
         #endregion 
         #region Assets
         /// <summary>

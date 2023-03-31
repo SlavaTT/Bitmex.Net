@@ -38,7 +38,7 @@ namespace   Bitmex.Net.Client.Interfaces
         event Action<BitmexSocketEvent<TradeBin>> OnDailyTradeBinUpdate;
               
         event Action<BitmexSocketEvent<Affiliate>> OnUserAffiliatesUpdate;
-        event Action<BitmexSocketEvent<Execution>> OnUserExecutionsUpdate;
+        event Action<BitmexSocketEvent<TradeExecution>> OnUserExecutionsUpdate;
         event Action<BitmexSocketEvent<BitmexOrder>> OnUserOrdersUpdate;
         event Action<BitmexSocketEvent<Margin>> OnUserMarginUpdate;
         event Action<BitmexSocketEvent<BitmexPosition>> OnUserPositionsUpdate;
