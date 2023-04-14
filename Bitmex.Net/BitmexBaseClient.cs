@@ -74,7 +74,7 @@ namespace Bitmex.Net
         }
 
         #region RestApiClient methods
-        public override TimeSpan GetTimeOffset() => TimeSpan.Zero;
+        public override TimeSpan? GetTimeOffset() => TimeSpan.Zero;
 
         /// <inheritdoc />
         public override TimeSyncInfo GetTimeSyncInfo() => new TimeSyncInfo(log, false, TimeSpan.MaxValue, TimeSyncState);

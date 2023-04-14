@@ -553,7 +553,7 @@ namespace Bitmex.Net.Client
             authRequest.Args.Add(authParams.Credentials.Key.GetString());
             authRequest.Args.Add(expires);
             authRequest.Args.Add(authParams.Sign(authParams.CreateAuthPayload(HttpMethod.Get, "/realtime", expires)));
-            await socketConnection.SendAndWaitAsync(authRequest, TimeSpan.FromSeconds(1), f =>
+            await socketConnection.SendAndWaitAsync(authRequest, TimeSpan.FromSeconds(1), null, f =>
             {
                 if (String.IsNullOrEmpty(f.ToString()))
                 {
