@@ -69,5 +69,15 @@ namespace  Bitmex.Net.Client.Interfaces
         /// <returns></returns>
         Task<WebCallResult<List<Funding>>> GetFundingAsync(BitmexRequestWithFilter requestWithFilter = null, CancellationToken ct = default);
         #endregion
+        #region User : MarginStatus
+
+        /// <summary>
+        /// Get your current margin info
+        /// </summary>
+        /// <param name="ct"></param>
+        /// <returns></returns>
+        Task<WebCallResult<IEnumerable<Margin>>> GetUserMarginStatusAllAssetsAsync(CancellationToken ct = default);
+        #endregion
+
     }
 }

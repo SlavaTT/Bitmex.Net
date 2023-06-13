@@ -125,7 +125,13 @@ namespace Bitmex.Net.Client
             return result.As(result.Data?.Select(pos => pos.ToCryptoExchangePosition()));
         }
 
-        #endregion
+		public async Task<WebCallResult<IEnumerable<Margin>>> GetUserMarginStatusAllAssetsAsync(CancellationToken ct = default)
+		{
+            var result = await GetMarginStatusAllAssets(ct);
+            return result.As(result.Data?.Select(x => x));
+		}
 
-    }
+		#endregion
+
+	}
 }
