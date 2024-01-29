@@ -79,7 +79,7 @@ namespace Bitmex.Net.Client.Helpers.Extensions
                     }
                     if (value is DateTime || value is DateTime?)
                     {
-                        value = ((DateTime)value).ToString("o", System.Globalization.CultureInfo.InvariantCulture);
+                        value = ((DateTime)value).ToString("yyyy-MM-ddTHH:mm:ss.fffZ", System.Globalization.CultureInfo.InvariantCulture);
                     }
                     if (!result.ContainsKey(key) && !String.IsNullOrEmpty(key) && !String.IsNullOrEmpty(value.ToString()))
                     {

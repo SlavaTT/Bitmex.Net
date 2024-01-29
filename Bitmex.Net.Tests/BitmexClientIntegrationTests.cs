@@ -80,5 +80,18 @@ namespace Bitmex.Net.Client.Tests
             Assert.False(order);
             Assert.NotNull(order.Error);
         }
-   }
+
+        [Fact]
+        public void UserExecHistory()
+        {
+            var options = new BitmexRestOptions("", "", outputOriginalData: true);
+            var client = new BitmexClient(options);
+
+            var filter = new BitmexRequestWithFilter() { Symbol = "XBTUSDT", Timestamp = new DateTime(2022, 10, 2, 12, 00, 00, 00)};
+            var execHist = client.MarginClient.GetUserExecutionHistoryAsync(filter).Result;
+          
+            Assert.False(execHist);
+            Assert.NotNull(execHist.Error);
+        }
+    }
 }
