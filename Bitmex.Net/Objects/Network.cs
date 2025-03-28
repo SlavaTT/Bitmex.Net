@@ -17,12 +17,12 @@ namespace Bitmex.Net.Client.Objects
         public bool WithdrawalEnabled { get; set; }
 
         [JsonProperty("withdrawalFee")]
-        public decimal WithdrawalFee { get; set; }
+        public decimal? WithdrawalFee { get; set; }
 
         [JsonProperty("minFee")]
-        public decimal MinFee { get; set; }
+        public decimal? MinFee { get; set; }
 
         [JsonProperty("maxFee")]
-        public decimal MaxFee { get; set; }
+        public decimal? MaxFee { get; set; }
     }
 }

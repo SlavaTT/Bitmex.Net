@@ -29,13 +29,13 @@ namespace Bitmex.Net.Client.Objects
         public bool IsMarginCurrency { get; set; }
 
         [JsonProperty("minDepositAmount")]
-        public decimal MinDepositAmount { get; set; }
+        public decimal? MinDepositAmount { get; set; }
 
         [JsonProperty("minWithdrawalAmount")]
-        public decimal MinWithdrawalAmount { get; set; }
+        public decimal? MinWithdrawalAmount { get; set; }
 
         [JsonProperty("maxWithdrawalAmount")]
-        public decimal MaxWithdrawalAmount { get; set; }
+        public decimal? MaxWithdrawalAmount { get; set; }
 
         [JsonProperty("networks")]
         public Network[] Networks { get; set; }
